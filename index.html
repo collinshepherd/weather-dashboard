@@ -19,88 +19,86 @@
         <aside class="col-md-4">
           <div>
             <h2>Search for a City:</h2>
-            <form class="input-group mb-3">
+            <form id="search-input-box" class="input-group mb-3">
               <input
+                id="search-input-text"
                 type="text"
                 class="form-control"
                 placeholder="City Name"
                 aria-label="City Name"
               />
               <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button">
-                  Search
-                </button>
+                <input
+                  class="btn btn-outline-primary"
+                  type="submit"
+                  value="Search"
+                />
               </div>
             </form>
           </div>
-          <div class="row">
-            <div class="col-6 col-sm-12">
-              <a class="btn btn-secondary d-block my-1">Atlanta</a>
-            </div>
-            <div class="col-6 col-sm-12">
-              <a class="btn btn-secondary d-block my-1">Denver</a>
-            </div>
-            <div class="col-6 col-sm-12">
-              <a class="btn btn-secondary d-block my-1">Atlanta</a>
-            </div>
-            <div class="col-6 col-sm-12">
-              <a class="btn btn-secondary d-block my-1">Denver</a>
-            </div>
-          </div>
+          <div id="recent-search-container" class="row"></div>
         </aside>
         <article class="col-md-8">
           <div class="border border-danger rounded p-2 mt-2">
-            <h2>Fake date and stuff</h2>
-            <p>Temp</p>
-            <p>Wind</p>
-            <p>Humidity</p>
+            <div>
+              <h2 class="d-inline" id="current-date">Fake date and stuff</h2>
+              <img
+                class="d-inline ms-2"
+                id="current-img"
+                src="https://placehold.co/20"
+                alt=""
+              />
+            </div>
+            <p id="current-temp">Temp</p>
+            <p id="current-wind">Wind</p>
+            <p id="current-humidity">Humidity</p>
           </div>
           <div>
             <h3 class="text-center">5-Day Forecast:</h3>
             <div class="row">
-              <div class="col-xl mb-2 mb-md-0">
+              <div class="col-xl mb-2 mb-md-1 mb-xl-0">
                 <div class="bg-danger p-2">
-                  <h4>10/25/2023</h4>
-                  <img src="https://placehold.co/20" />
-                  <p>Temp: <span></span> &deg;F</p>
-                  <p>Wind: <span></span> MPH</p>
-                  <p>Humidity: <span></span> %</p>
+                  <h4 id="day-one-date">10/25/2023</h4>
+                  <img id="day-one-picture" src="https://placehold.co/20" />
+                  <p id="day-one-temp">Temp: <span></span> &deg;F</p>
+                  <p id="day-one-wind">Wind: <span></span> MPH</p>
+                  <p id="day-one-humidity">Humidity: <span></span> %</p>
                 </div>
               </div>
-              <div class="col-xl mb-2 mb-md-0">
+              <div class="col-xl mb-2 mb-md-1 mb-xl-0">
                 <div class="bg-danger p-2">
-                  <h4>10/25/2023</h4>
-                  <img src="https://placehold.co/20" />
-                  <p>Temp: <span></span> &deg;F</p>
-                  <p>Wind: <span></span> MPH</p>
-                  <p>Humidity: <span></span> %</p>
+                  <h4 id="day-two-date">10/25/2023</h4>
+                  <img id="day-two-picture" src="https://placehold.co/20" />
+                  <p id="day-two-temp">Temp: <span></span> &deg;F</p>
+                  <p id="day-two-wind">Wind: <span></span> MPH</p>
+                  <p id="day-two-humidity">Humidity: <span></span> %</p>
                 </div>
               </div>
-              <div class="col-xl mb-2 mb-md-0">
+              <div class="col-xl mb-2 mb-md-1 mb-xl-0">
                 <div class="bg-danger p-2">
-                  <h4>10/25/2023</h4>
-                  <img src="https://placehold.co/20" />
-                  <p>Temp: <span></span> &deg;F</p>
-                  <p>Wind: <span></span> MPH</p>
-                  <p>Humidity: <span></span> %</p>
+                  <h4 id="day-three-date">10/25/2023</h4>
+                  <img id="day-three-picture" src="https://placehold.co/20" />
+                  <p id="day-three-temp">Temp: <span></span> &deg;F</p>
+                  <p id="day-three-wind">Wind: <span></span> MPH</p>
+                  <p id="day-three-humidity">Humidity: <span></span> %</p>
                 </div>
               </div>
-              <div class="col-xl mb-2 mb-md-0">
+              <div class="col-xl mb-2 mb-md-1 mb-xl-0">
                 <div class="bg-danger p-2">
-                  <h4>10/25/2023</h4>
-                  <img src="https://placehold.co/20" />
-                  <p>Temp: <span></span> &deg;F</p>
-                  <p>Wind: <span></span> MPH</p>
-                  <p>Humidity: <span></span> %</p>
+                  <h4 id="day-four-date">10/25/2023</h4>
+                  <img id="day-four-picture" src="https://placehold.co/20" />
+                  <p id="day-four-temp">Temp: <span></span> &deg;F</p>
+                  <p id="day-four-wind">Wind: <span></span> MPH</p>
+                  <p id="day-four-humidity">Humidity: <span></span> %</p>
                 </div>
               </div>
-              <div class="col-xl mb-2 mb-md-0">
+              <div class="col-xl mb-2 mb-md-1 mb-xl-0">
                 <div class="bg-danger p-2">
-                  <h4>10/25/2023</h4>
-                  <img src="https://placehold.co/20" />
-                  <p>Temp: <span></span> &deg;F</p>
-                  <p>Wind: <span></span> MPH</p>
-                  <p>Humidity: <span></span> %</p>
+                  <h4 id="day-five-date">10/25/2023</h4>
+                  <img id="day-five-picture" src="https://placehold.co/20" />
+                  <p id="day-five-temp">Temp: <span></span> &deg;F</p>
+                  <p id="day-five-wind">Wind: <span></span> MPH</p>
+                  <p id="day-five-humidity">Humidity: <span></span> %</p>
                 </div>
               </div>
             </div>
@@ -114,6 +112,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
