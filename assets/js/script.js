@@ -32,6 +32,7 @@ function startSearch() {
       storeSearchInputs(userInputCity);
       currentDayWeather(latAndLon);
       displayForecast(latAndLon);
+      $("#results-container").removeClass("d-none");
     }
   }, 1000);
 }
@@ -45,10 +46,12 @@ $("#recent-search-container").on("click", function (event) {
 
     var latAndLon = [""];
     latAndLon = getCoordinates(userInputCity);
+
     setTimeout(() => {
       if (validCoordinates) {
         currentDayWeather(latAndLon);
         displayForecast(latAndLon);
+        $("#results-container").removeClass("d-none");
       }
     }, 1000);
   }
@@ -107,7 +110,7 @@ function getCoordinates(city) {
     return;
   }
 
-  var geocodeURL = "http://api.openweathermap.org/geo/1.0/direct?q=";
+  var geocodeURL = "https://api.openweathermap.org/geo/1.0/direct?q=";
 
   var geocodeID = "&limit=1&appid=2732ac4856a3bf739460f86863c8bac6";
 
